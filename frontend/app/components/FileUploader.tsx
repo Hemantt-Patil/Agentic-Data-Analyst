@@ -3,6 +3,8 @@
 import { useState } from "react";
 import axios from "axios";
 
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8000";
+
 interface FileUploaderProps {
   onResult: (data: any) => void;
 }
@@ -21,7 +23,7 @@ export default function FileUploader({ onResult }: FileUploaderProps) {
     formData.append("file", file);
 
     try {
-      const res = await axios.post("http://localhost:8000/analyze/", formData, {
+      const res = await axios.post(`${BACKEND_URL}/analyze/`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
         timeout: 120000, // 2 minutes in case processing is slow
       });
@@ -51,3 +53,4 @@ export default function FileUploader({ onResult }: FileUploaderProps) {
     </div>
   );
 }
+
