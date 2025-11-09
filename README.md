@@ -29,9 +29,11 @@ cd frontend
 npm install
 npm run dev
 
+## 🤖 Agent Overview
 
 | Agent                | Role                                         |
 | -------------------- | -------------------------------------------- |
 | **Insight Agent**    | Finds data trends, outliers, correlations    |
 | **Summary Agent**    | Generates human-readable summary             |
 | **Visualizer Agent** | Creates visualizations (charts + wordclouds) |
+
