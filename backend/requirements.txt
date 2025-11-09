@@ -4,3 +4,4 @@ pandas
 aiohttp
 matplotlib
 python-dotenv
+python-multipart
